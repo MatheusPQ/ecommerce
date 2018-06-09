@@ -1,0 +1,29 @@
+composer.json
+    Colocar nome de usuário do github/nome do repositório
+
+    'composer update' para instalar as dependências especificadas no composer.json
+
+hosts
+    Copiar conteúdo e colar no final do arquivo hosts, dentro de C:/windows/System32/drivers/etc
+
+    Assim, poderá rodar o site com www.hcodecommerce.com.br, ao invés de localhost:....
+
+httpd-vhosts.conf
+    Copiar conteúdo e colar no final do arquivo de mesmo nome, localizado em:
+        C:\xampp\apache\conf\extra
+    Alterar DocumentRoot e Directory para:
+        "C:/ecommerce" (barra desse jeito mesmo)
+    Após salvar o arquivo, reiniciar o apache no Xampp
+    Ao digitar o site no navegador, td já deverá estar funcionando
+        (Considerando que o composer terminou de instalar td)
+
+git remote add origin <origem do repositório>
+git add .
+git commit -m "<mensagem>"
+git push origin master
+
+Sempre que fizer alterações dentro da pasta vendor, rodar 'composer dump-autoload'
+
+composer.json
+    Precisa colocar o nome do vendor! (Hcode\\) (uma barra 'escapa' a outra)
+        "Hcode\\": "vendor\\hcodebr\\php-classes\\src"
