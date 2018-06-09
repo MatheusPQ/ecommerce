@@ -2,20 +2,20 @@
 
 require_once("vendor/autoload.php");
 
-$app = new \Slim\Slim();
+use \Slim\Slim;
+use \Hcode\Page;
+$app = new Slim(); //Rotas
 
 $app->config('debug', true);
 
 $app->get('/', function() {
-    
-	$sql = new Hcode\DB\Sql();
+	
+	$page = new Page();
 
-	$results = $sql->select("SELECT * FROM tb_users");
+	$page->setTpl("index");
 
-	echo json_encode($results);
+});//Quando chegar nesta linha, será chamado o desctruct do Page (que incluirá o Destruct)
 
-});
-
-$app->run();
+$app->run(); //Roda tudo!
 
  ?>
