@@ -27,3 +27,5 @@ Sempre que fizer alterações dentro da pasta vendor, rodar 'composer dump-autol
 composer.json
     Precisa colocar o nome do vendor! (Hcode\\) (uma barra 'escapa' a outra)
         "Hcode\\": "vendor\\hcodebr\\php-classes\\src"
+
+        PAROU EM 36:24, Admin - Esqueceu a Senha
